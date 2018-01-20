@@ -3,19 +3,52 @@ var sec = 51;
 var start = true;
 var contor = 0;
 var idNotRepeat = 0;
+var easy;
+var buttonMessage;
 
+function EasyGame()
+{
+	easy = true;
+	blockButtons('Easy');
+	
+}
+function HardGame()
+{
+	easy = false;
+	blockButtons('Hard');
+}
 
-addEventListener('load', init, false);
+function blockButtons(msg)
+{
+	var btn = document.getElementById('myBtn1');
+	btn.disabled = true;
+	btn.style.color = "black";
+	
+	
+		
+	var btn = document.getElementById('myBtn2');
+	btn.disabled = true;
+	btn.style.color = "black";
+	
+	
+	
+	document.getElementById('myBtn1').innerHTML = msg + " game selected";
+	document.getElementById('myBtn2').innerHTML = msg + " game selected";
+	document.getElementById('timer').innerHTML = "∞ Seconds - Press any card to begin";
+	
+}
+
+//addEventListener('load', init, false);
 
 function init() 
 {
-
 var je = 0;
 var v = [16];
 for(var h = 0; h < 16; h++)
 v[h] = 0;
 
-
+if(easy==true)
+{
 dArray = ["♥", "♥", "♣", "♣",
 
  "☯", "☯", "⚛", "⚛", 
@@ -24,6 +57,18 @@ dArray = ["♥", "♥", "♣", "♣",
 
   "♪", "♪", "✧", "✧"];
 
+}
+else
+{
+
+dArray =	["✬", "✬", "✭", "✭",
+
+ "✮", "✮", "✯", "✯", 
+
+ "✹", "✹", "✵", "✵",
+
+  "✶", "✶", "✷", "✷"];
+}
 
 var dTd = [16];
 
@@ -60,9 +105,6 @@ else
 {
 
 dTd[x] = document.getElementById("td" + x);
-
-
-
 
 dTd[x].innerHTML = dArray[current];
 
@@ -321,14 +363,12 @@ function startTimer()
 	{
 	if(sec == 0)
 	{
-		
-		
+				
 		active=false;
 		for(var nr = 0; nr < 16; nr++)
 		{
 			document.getElementById('td'+ nr).onclick= 'null';
 		}
-				
 	
 		
 	}
@@ -342,7 +382,13 @@ function startTimer()
 	if(sec == 0 )
 	{
 		document.getElementById("timer").innerHTML = "Time expired !!! You have lost the game !!!";
+		var btnPlayAgain = document.getElementById("btnPlay");
+		btnPlayAgain.innerHTML = "Play again ???";
+		
+		
 		active = false;
+		
+		
 		for(var nr = 0; nr < 16; nr++)
 		{
 			document.getElementById('td'+ nr).onclick= 'null';

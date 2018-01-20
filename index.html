@@ -64,10 +64,10 @@ color:radial-gradient(black 10%, gray 40%, white 15%);
 
 </head>
 
-<body background="pattern6.jpg" oncopy="return false" oncut="return false" onpaste="return false">
-<center><p><span id="timer" style="font-size: 400%; color:white; font-weight:bold; ">∞ Seconds</span></p></center>	
+<body background="pattern6.jpg">
+<center><p><span id="timer" style="font-size: 400%; color:white; font-weight:bold; ">∞ Seconds - Please select difficulty</span></p></center>	
 <center>
-<div class="wrapper" style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;">
+<div style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;">
 <table id="table0">
 
   <tr id="row1">
@@ -121,8 +121,9 @@ color:radial-gradient(black 10%, gray 40%, white 15%);
   </table>
 </div>
 <br>
-<div>
-<button class="Design1" onClick="window.location.reload()"> Play again </button>
+<button class="Design1" id="myBtn1"  onclick="EasyGame(); init();"> Start easy game </button>
+<button class="Design1" id="btnPlay" onClick="window.location.reload()"> Play again </button>
+<button class="Design1" id="myBtn2"  onClick="HardGame(); init();"> Start hard game </button>
 </center>
 <script src="script.js"></script>
 </body>
