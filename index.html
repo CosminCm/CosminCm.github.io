@@ -1,0 +1,130 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<link href = "style.css" rel="stylesheet" type="text/css"/>
+<title>Memory Game</title>
+
+  <style>
+
+table {
+
+}
+
+tr {
+
+width: 400px;
+max-width: 400px;
+
+height: 100px;
+max-height: 100px;
+color: radial-gradient(black 28%, #262626 30% ,#666666 60%);
+
+
+
+}
+
+td{
+
+position: relative;
+
+width: 110px;
+max-width: 110px;
+
+height: 100px;
+max-height: 100px;
+
+background: radial-gradient(black 28%, #262626 30% ,#666666 60%);
+
+border: 1px solid black;
+
+text-align: center;
+
+vertical-align: center;
+
+cursor: pointer;
+
+}
+
+td::selection {
+
+color:radial-gradient(black 10%, gray 40%, white 15%);
+
+
+}
+
+</style>
+
+  <script>
+
+</script>
+
+</head>
+
+<body background="pattern6.jpg" oncopy="return false" oncut="return false" onpaste="return false">
+<center><p><span id="timer" style="font-size: 400%; color:white; font-weight:bold; ">∞ Seconds</span></p></center>	
+<center>
+<div class="wrapper" style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;">
+<table id="table0">
+
+  <tr id="row1">
+	
+    <td class="Settings" id="td0">loading</td>
+
+      <td class="Settings" id="td1">loading</td>
+
+      <td class="Settings" id="td2">loading</td>
+
+      <td class="Settings" id="td3">loading</td>
+	
+    </tr>
+
+  <tr>
+	
+    <td class="Settings" id="td4">loading</td>
+
+      <td class="Settings" id="td5">loading</td>
+
+      <td class="Settings" id="td6">loading</td>
+
+      <td class="Settings" id="td7">loading</td>
+	
+    </tr>
+
+    <tr>
+	
+    <td class="Settings" id="td8">loading</td>
+
+      <td class="Settings" id="td9">loading</td>
+
+      <td class="Settings" id="td10">loading</td>
+
+      <td class="Settings" id="td11">loading</td>
+	
+    </tr>
+
+    <tr>
+	
+    <td class="Settings" id="td12">loading</td>
+
+      <td class="Settings" id="td13">loading</td>
+
+      <td class="Settings" id="td14">loading</td>
+
+      <td class="Settings" id="td15">loading</td>
+	
+    </tr>
+
+  </table>
+</div>
+<br>
+<div>
+<button class="Design1" onClick="window.location.reload()"> Play again </button>
+</center>
+<script src="script.js"></script>
+</body>
+
+</html>
