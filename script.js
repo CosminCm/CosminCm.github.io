@@ -34,17 +34,8 @@ function blockButtons(msg)
 	document.getElementById('5').disabled = true;
 	
 	
-
-	
-	
-		
-	//var btn = document.getElementById('myBtn2');
-	//btn.disabled = true;
-	//	btn.style.color = "black";
 	document.getElementById('myBtn2').disabled = true;
 	document.getElementById('myBtn2').style.color="black";
-	
-	
 	
 	document.getElementById('myBtn1').innerHTML = msg + " game selected";
 	document.getElementById('myBtn2').innerHTML = msg + " game selected";
@@ -56,7 +47,6 @@ function blockButtons(msg)
 
 function init() 
 {
-var je = 0;
 var v = [16];
 for(var h = 0; h < 16; h++)
 v[h] = 0;
@@ -93,10 +83,9 @@ var x;
 
 for(x = 0; x < 16; x++ ) 
 
-      { 
+{ 
 
 aleatory();
-h;
 for(var y = 0; y < 16; y++)
 
 {
@@ -135,7 +124,8 @@ break;
 var count = 0;
 	
 
-function check(v1,v2){
+function check(v1,v2)
+{
 if(active)
 {
 
@@ -172,11 +162,6 @@ document.getElementById(v11).style.display = 'none'; //none
 document.getElementById(v22).style.display = 'none';
 }
 
-
-//document.getElementById(v11).style.display = 'none';
-//document.getElementById(v22).style.display = 'none';
-//alert(v11);
-//alert(v22);
 
 }
 
@@ -259,7 +244,7 @@ if(count == 2)
 
 var2 = document.getElementById(this.id);
 
-//////////////////////////////////////////////////////////////////////////
+
 if(idNotRepeat != var2.id)
 {
 check(var1, var2);
@@ -278,7 +263,7 @@ theTimer1 = setTimeout(function(){forTimer1(var1, var2);}, 1000);
 }
 
 
-////////////////////////////////////////////////////////////////////////////
+
 }
 }
 }
@@ -368,13 +353,8 @@ if(v[current] > 1)
 v[current] = 1;
 
 aleatory();
-
-
 } 
-
-
 }
-
 }
 
 function startTimer() 
