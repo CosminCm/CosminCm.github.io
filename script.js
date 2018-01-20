@@ -1,5 +1,5 @@
 var active = true;
-var sec = 51;
+var sec;
 var start = true;
 var contor = 0;
 var idNotRepeat = 0;
@@ -10,25 +10,31 @@ function EasyGame()
 {
 	easy = true;
 	blockButtons('Easy');
+	sec = 51;
 	
 }
 function HardGame()
 {
 	easy = false;
 	blockButtons('Hard');
+	sec = 41;
 }
 
 function blockButtons(msg)
 {
-	var btn = document.getElementById('myBtn1');
-	btn.disabled = true;
-	btn.style.color = "black";
+	//var btn = document.getElementById('myBtn1');
+	//btn.disabled = true;
+	//btn.style.color = "black";
+	document.getElementById('myBtn1').disabled = true;
+	document.getElementById('myBtn1').style.color="black";
 	
 	
 		
-	var btn = document.getElementById('myBtn2');
-	btn.disabled = true;
-	btn.style.color = "black";
+	//var btn = document.getElementById('myBtn2');
+	//btn.disabled = true;
+	//	btn.style.color = "black";
+	document.getElementById('myBtn2').disabled = true;
+	document.getElementById('myBtn2').style.color="black";
 	
 	
 	
