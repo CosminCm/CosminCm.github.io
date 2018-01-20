@@ -1,0 +1,7 @@
+.Design1 { width: 400px; height:100px; font-size:350%; color:white; font-weight:bold; text-shadow:1px 1px 1px #00ace6; background-image: url("patern2.jpg"); border-radius:4px; border-color:white;}
+
+.Design2 {background-image: patern2.jpg}
+
+.Settings { border-radius:15px; border-color:white;}
+
+.Prop5 {display: inline-block;}
