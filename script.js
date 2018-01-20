@@ -5,19 +5,20 @@ var contor = 0;
 var idNotRepeat = 0;
 var easy;
 var buttonMessage;
+var effects = true;
 
 function EasyGame()
 {
 	easy = true;
 	blockButtons('Easy');
-	sec = 51;
+	sec = 61;
 	
 }
 function HardGame()
 {
 	easy = false;
 	blockButtons('Hard');
-	sec = 41;
+	sec = 51;
 }
 
 function blockButtons(msg)
@@ -150,14 +151,21 @@ v2.onclick = 'null';
 //v1.visibility =  "hidden";
 var v11 = v1.getAttribute('id');
 var v22 = v2.getAttribute('id');
-//v1.innerHTML = "";
-//v2.innerHTML = "";
+
 
 //document.getElementById(v11).style.display = 'none';
 //document.getElementById(v22).style.display = 'none';
-
+if(effects)
+{
+setTimeout(function() {hideElements();},1000);
+}
+function hideElements()
+{
 document.getElementById(v11).style.display = 'none'; //none
 document.getElementById(v22).style.display = 'none';
+}
+
+
 //document.getElementById(v11).style.display = 'none';
 //document.getElementById(v22).style.display = 'none';
 //alert(v11);
@@ -404,6 +412,24 @@ function startTimer()
 	setTimeout(startTimer,1000);
 		
 	
+	}
+}
+var aa = true;
+function PageEffects(once)
+{
+	if(once && aa )
+	{
+	effects = false;
+	document.getElementById("5").innerHTML = "Show matched cards";
+	once = false;
+	aa = false;
+	}
+	else
+	{
+		effects = true;
+		aa = true;
+		document.getElementById("5").innerHTML = "Hide matched cards";
+
 	}
 }
 
