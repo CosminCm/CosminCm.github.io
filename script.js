@@ -10,14 +10,9 @@ addEventListener('load', init, false);
 function init() 
 {
 
-
-
 var je = 0;
-
 var v = [16];
-
 for(var h = 0; h < 16; h++)
-
 v[h] = 0;
 
 
@@ -28,10 +23,6 @@ dArray = ["♥", "♥", "♣", "♣",
  "♢", "♢", "☮", "☮",
 
   "♪", "♪", "✧", "✧"];
-
-
-
-
 
 
 var dTd = [16];
@@ -86,13 +77,16 @@ break;
 }
 
 var count = 0;
-hideSigns();	
+	
 
 function check(v1,v2){
+if(active)
+{
 
 if(v1.innerHTML == v2.innerHTML)
 
 {
+	
 contor++;
 
 if(contor == 8)
@@ -137,13 +131,15 @@ dTd[x].onclick = "null";
 
 theTimer1 = setTimeout(function(){forTimer1(v1, v2);}, 1000);
 
+
+}
 }
 }
 
 function forTimer1(vv1,vv2)
-
 {
-
+if(active)
+{
 vv1.style.background = "radial-gradient(black 28%, #262626 30% ,#666666 60%)";
 //vv1.style.backgroundImage = "url('patern.png')";
 vv1.style.textShadow = "";
@@ -159,9 +155,12 @@ for(x = 0; x < 16; x++)
 dTd[x].onclick = turn;
 
 }
+}
 
-function turn() {
-
+function turn() 
+{
+if(active)
+{
 if(start)
 {
 startTimer();
@@ -217,6 +216,7 @@ theTimer1 = setTimeout(function(){forTimer1(var1, var2);}, 1000);
 
 
 ////////////////////////////////////////////////////////////////////////////
+}
 }
 }
 
@@ -342,6 +342,11 @@ function startTimer()
 	if(sec == 0 )
 	{
 		document.getElementById("timer").innerHTML = "Time expired !!! You have lost the game !!!";
+		active = false;
+		for(var nr = 0; nr < 16; nr++)
+		{
+			document.getElementById('td'+ nr).onclick= 'null';
+		}
 	}
 	
 	setTimeout(startTimer,1000);
@@ -350,12 +355,5 @@ function startTimer()
 	}
 }
 
-function hideSigns()
-{
-	for(var i = 0; i <16; i++)
-	{
-		var x = "td" + i;
-		x.style.display = 'none';
-	}
-}
+
 
