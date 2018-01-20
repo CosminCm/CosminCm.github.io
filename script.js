@@ -11,16 +11,17 @@ function EasyGame()
 {
 	easy = true;
 	blockButtons('Easy');
-	sec = 61;
+	sec = 51;
 	
 }
 function HardGame()
 {
 	easy = false;
 	blockButtons('Hard');
-	sec = 51;
+	sec = 41;
 }
-
+var result;
+var textDel;
 function blockButtons(msg)
 {
 	//var btn = document.getElementById('myBtn1');
@@ -28,6 +29,12 @@ function blockButtons(msg)
 	//btn.style.color = "black";
 	document.getElementById('myBtn1').disabled = true;
 	document.getElementById('myBtn1').style.color="black";
+	
+	
+	document.getElementById('5').disabled = true;
+	
+	
+
 	
 	
 		
