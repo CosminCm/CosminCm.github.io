@@ -65,7 +65,7 @@ dArray = ["♥", "♥", "♣", "♣",
 else
 {
 
-dArray =	["✬", "✬", "✭", "✭",
+dArray =["✬", "✬", "✭", "✭",
 
  "✮", "✮", "✯", "✯", 
 
@@ -145,20 +145,19 @@ count = 0;
 
 v1.onclick = 'null';
 v2.onclick = 'null';
-//v1.visibility =  "hidden";
+
 var v11 = v1.getAttribute('id');
 var v22 = v2.getAttribute('id');
 
-
-//document.getElementById(v11).style.display = 'none';
-//document.getElementById(v22).style.display = 'none';
+//document.getElementById(v11).style.display = 'table-row'; //error...
+//document.getElementById(v22).style.display = 'table-row';
 if(effects)
 {
 setTimeout(function() {hideElements();},1000);
 }
 function hideElements()
 {
-document.getElementById(v11).style.display = 'none'; //none
+document.getElementById(v11).style.display = 'none'; 
 document.getElementById(v22).style.display = 'none';
 }
 
@@ -168,8 +167,6 @@ document.getElementById(v22).style.display = 'none';
 else
 
 {
-
-
 count = 0;
 
 for(x = 0; x < 16; x++)
@@ -193,7 +190,7 @@ vv1.style.background = "radial-gradient(black 28%, #262626 30% ,#666666 60%)";
 vv1.style.textShadow = "";
 
 vv2.style.background = "radial-gradient(black 28%, #262626 30% ,#666666 60%)"; //radial-gradient(black 27%, white 60%, #00001a 15%)
-//vv2.style.backgroundImage = "patern.png";
+
 vv2.style.textShadow = "";
 
 clearTimeout(theTimer1);
