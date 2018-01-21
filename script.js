@@ -51,7 +51,7 @@ var v = [16];
 for(var h = 0; h < 16; h++)
 v[h] = 0;
 
-if(easy==true)
+if(easy)
 {
 dArray = ["♥", "♥", "♣", "♣",
 
