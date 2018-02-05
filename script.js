@@ -138,7 +138,7 @@ contor++;
 if(contor == 8)
 {
 	active = false;
-	document.getElementById('timer').innerHTML = "Congratulations !!! You win !!!";
+	document.getElementById('timer').innerHTML = "Congratulations !!! You won !!!";
 	
 }
 count = 0;
